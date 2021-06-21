@@ -23,7 +23,7 @@ public class EmailUtil {
     @Value("${com.ajit.flightreservationapplication.itinerary.email.subject}")
     private String EMAIL_SUBJECT;
     @Value("${com.ajit.flightreservationapplication.itinerary.email.body}")
-    private String EMAIL_BODY="Please find your Itinerary Attatched";
+    private final String EMAIL_BODY="Please find your Itinerary Attatched";
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EmailUtil.class);
 

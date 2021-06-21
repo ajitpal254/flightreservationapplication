@@ -16,6 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 
 @Service
 public class ReservationServiceImpl implements ReservationService{
@@ -38,6 +40,7 @@ public class ReservationServiceImpl implements ReservationService{
     @Value("${com.ajit.flightreservationapplication.itinerary.dirpath}")
     private String Itinerary_DIR;
     @Override
+    @Transactional
     public Reservation bookFlight(ReservationRequest request) {
 
 
